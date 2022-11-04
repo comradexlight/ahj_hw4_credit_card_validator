@@ -5,6 +5,21 @@
     <title></title>
 </head>
 <body>
-    
+    <h2>Введите номер карты:</h2>
+    <ul class="card-list">
+        <li class="card" title="Мир"><img class="card-logo" src="./img/mir.svg" alt="Мир"></li>
+        <li class="card" title="Visa"><img class="card-logo" src="./img/visa.svg" alt="Visa"></li>
+        <li class="card" title="Mastrer card"><img class="card-logo" src="./img/mastercard.svg" alt="Mastrer card"></li>
+        <li class="card" title="American Express"><img class="card-logo" src="./img/americanexpress.svg" alt="American Express"></li>
+        <li class="card" title="JCB"><img class="card-logo" src="./img/jcb.svg" alt="JCB"></li>
+        <li class="card" title="Union Pay"><img class="card-logo" src="./img/unionpay.svg" alt="AUnion Pay"></li>
+    </ul>
+    <form>
+        <label>
+            <input type="text" name="card-number" class="card-number">
+            <button class="card-btn">Проверить</button>
+        </label>
+    </form>
+    <h4>Проверка алгоритмом Луна:<span class="luhn-check"></span></h4>
 </body>
 </html>

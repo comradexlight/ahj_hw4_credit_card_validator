@@ -1,0 +1,28 @@
+h2 {
+	margin-bottom: 4px;
+}
+
+ul.card-list {
+	 padding: 0; 
+   margin: 0 0 10px 0;
+}
+
+li.card {
+	list-style-type: none;
+	display: inline;
+	margin: 4px;
+}
+
+img.card-logo {
+	max-width: 39px;
+  max-height: 25px;
+  vertical-align: middle;
+}
+
+.card-btn {
+	background: #7ACC52;
+}
+
+.card.cdisabled {
+ opacity:.3
+}
