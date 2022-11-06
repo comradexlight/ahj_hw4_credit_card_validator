@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <link rel="shortcut icon" href="#">
+    <title>Проверка банковских карт</title>
 </head>
 <body>
-    <h2>Введите номер карты:</h2>
+    <div class="main-title">Введите номер карты:</div>
     <ul class="card-list">
-        <li class="card" title="Мир"><img class="card-logo" src="./img/mir.svg" alt="Мир"></li>
-        <li class="card" title="Visa"><img class="card-logo" src="./img/visa.svg" alt="Visa"></li>
-        <li class="card" title="Mastrer card"><img class="card-logo" src="./img/mastercard.svg" alt="Mastrer card"></li>
-        <li class="card" title="American Express"><img class="card-logo" src="./img/americanexpress.svg" alt="American Express"></li>
-        <li class="card" title="JCB"><img class="card-logo" src="./img/jcb.svg" alt="JCB"></li>
-        <li class="card" title="Union Pay"><img class="card-logo" src="./img/unionpay.svg" alt="AUnion Pay"></li>
+        <li class="card mir" title="Мир"><img class="card-logo" src="./img/mir.svg" alt="Мир"></li>
+        <li class="card visa" title="Visa"><img class="card-logo" src="./img/visa.svg" alt="Visa"></li>
+        <li class="card mastercard" title="Mastrer card"><img class="card-logo" src="./img/mastercard.svg" alt="Mastrer card"></li>
+        <li class="card americanexpress" title="American Express"><img class="card-logo" src="./img/americanexpress.svg" alt="American Express"></li>
+        <li class="card jcb" title="JCB"><img class="card-logo" src="./img/jcb.svg" alt="JCB"></li>
+        <li class="card unionpay" title="Union Pay"><img class="card-logo" src="./img/unionpay.svg" alt="AUnion Pay"></li>
     </ul>
-    <form>
-        <label>
-            <input type="text" name="card-number" class="card-number">
-            <button class="card-btn">Проверить</button>
-        </label>
-    </form>
-    <h4>Проверка алгоритмом Луна:<span class="luhn-check"></span></h4>
+    <div class="valid-widget">
+        <form class="vailid-widget-form">
+            <label><input name="valid-number" class="input valid-number"></label>
+            <button class="valid-btn btn">Проверить</button>
+            <div class="valid-widget-check">Проверка алгоритмом Луна:</div>
+        </form>
+    </div>
 </body>
 </html>

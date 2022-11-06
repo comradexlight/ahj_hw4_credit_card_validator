@@ -1,5 +1,10 @@
-h2 {
+.main-title {
+	font-size: 25px;
 	margin-bottom: 4px;
+}
+
+.valid-widget-check {
+	font-size: 15px;
 }
 
 ul.card-list {
@@ -19,10 +24,24 @@ img.card-logo {
   vertical-align: middle;
 }
 
-.card-btn {
+.valid-btn {
 	background: #7ACC52;
+	border-radius:10px;
+	margin-left: 5px;
 }
 
-.card.cdisabled {
- opacity:.3
+.disabled {
+ opacity: 0.1;
+}
+
+.checked::after {
+	content: ' \2714';
+	font-size: 20px;
+	color: #7ACC52;
+}
+
+.unchecked::after {
+	content: ' \2718';
+	font-size: 20px;
+	color: red;
 }
