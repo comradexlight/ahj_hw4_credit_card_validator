@@ -1,22 +1,30 @@
 export default function identifyPaymentSystem(cardNumber) {
-  if (cardNumber[0] === '2') {
-    return 'mir';
-  }
-  if (cardNumber[0] === '4') {
-    return 'visa';
-  }
-  if (cardNumber[0] === '5') {
-    return 'mastercard';
-  }
-  if (cardNumber.slice(0, 2) === '34' || cardNumber.slice(0, 2) === '37') {
-    return 'americanexpress';
-  }
-  if (cardNumber.slice(0, 2) === '31' || cardNumber.slice(0, 2) === '35' || cardNumber.slice(0, 2) === '36') {
-    return 'jcb';
-  }
-  if (cardNumber.slice(0, 2) === '62') {
-    return 'unionpay';
+  const issuerIdentificationNumber = {
+    2200: 'mir',
+    2201: 'mir',
+    2202: 'mir',
+    2203: 'mir',
+    2204: 'mir',
+    31: 'jcb',
+    34: 'americanexpress',
+    35: 'jcb',
+    37: 'americanexpress',
+    4: 'visa',
+    51: 'mastercard',
+    52: 'mastercard',
+    53: 'mastercard',
+    54: 'mastercard',
+    55: 'mastercard',
+    62: 'unionpay',
+  };
+
+  let paymentSystem;
+
+  for (const iin in issuerIdentificationNumber) {
+    if (cardNumber.startsWith(iin)) {
+      paymentSystem = issuerIdentificationNumber[iin];
+    }
   }
 
-  return undefined;
+  return paymentSystem;
 }
