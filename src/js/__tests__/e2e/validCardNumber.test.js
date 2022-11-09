@@ -16,7 +16,7 @@ describe('Input valid card number', () => {
     page = await browser.newPage();
   });
 
-  test('Div .valid-widget-check should ass .checked class if card number is valid by pressing the button  ', async () => {
+  test('Div valid-widget-check should as checked class if card number is valid by pressing the button  ', async () => {
     await page.goto('http:localhost:9000');
 
     const form = await page.$('.vailid-widget-form');
@@ -29,7 +29,7 @@ describe('Input valid card number', () => {
     await page.waitForSelector('.checked');
   });
 
-  test('Div .valid-widget-check should ass .checked class if card number is valid by pressing the button  ', async () => {
+  test('Div valid-widget-check should as checked class if card number is valid by pressing the button  ', async () => {
     await page.goto('http:localhost:9000');
 
     const form = await page.$('.vailid-widget-form');
