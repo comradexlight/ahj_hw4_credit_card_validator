@@ -2,8 +2,6 @@ import algorithmLuhn from './algorithmLuhn';
 import identifyPaymentSystem from './identifyPaymentSystem';
 import IconWidget from './iconWidget';
 
-const iconWidget = new IconWidget('.card-list');
-
 export default class ValidatorWidget {
   constructor(element) {
     if (typeof element === 'string') {
@@ -19,6 +17,7 @@ export default class ValidatorWidget {
     this._luhnCheck = this._element.querySelector('.valid-widget-check');
     this._validBtn.addEventListener('click', this.onBtnCLick);
     this._inputNumber.addEventListener('input', this.onInput);
+    this._iconWidget = new IconWidget('.card-list');
   }
 
   onBtnCLick(event) {
@@ -39,13 +38,13 @@ export default class ValidatorWidget {
     if (this._inputNumber.value) {
       const cartNumber = this._inputNumber.value;
       const paymentSystem = identifyPaymentSystem(cartNumber);
-      iconWidget.selCardEnable(paymentSystem);
+      this._iconWidget.selCardEnable(paymentSystem);
     }
   }
 
   onInput(event) {
     event.preventDefault();
-    iconWidget.setAllCardEnable();
+    this._iconWidget.setAllCardEnable();
 
     if (this._timeout) {
       clearTimeout(this._timeout);
