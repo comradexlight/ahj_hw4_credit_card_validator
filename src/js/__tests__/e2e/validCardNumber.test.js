@@ -7,9 +7,7 @@ describe('Input valid card number', () => {
   let page;
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({
-      headless: true,
-    });
+    browser = await puppeteer.launch();
 
     page = await browser.newPage();
   });
